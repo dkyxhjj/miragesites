@@ -202,39 +202,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* ━━ Templates teaser ━━ */}
-      <section className="border-t border-border-subtle bg-surface-raised py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Starting points</p>
-            <h2 className="mt-4 text-3xl font-bold tracking-tight lg:text-4xl">
-              Template-based starts
-            </h2>
-            <p className="mt-4 text-lg text-text-secondary">
-              Want to move fast and stay on budget? Proven layouts, ready to customize.
-            </p>
-          </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { name: "Small Business", desc: "Homepage, about, services, contact. The essentials." },
-              { name: "E-commerce", desc: "Product pages, cart, checkout. Everything to sell online." },
-              { name: "Service-Based", desc: "Trainers, consultants, agencies. Booking-ready." },
-              { name: "Landing Page", desc: "One page, one goal. Built to convert." },
-            ].map((t) => (
-              <div key={t.name} className="card-lift rounded-xl bg-white p-7 shadow-sm shadow-black/4">
-                <h3 className="text-lg font-bold">{t.name}</h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-text-secondary">{t.desc}</p>
-                <Link
-                  href="/contact"
-                  className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-dark"
-                >
-                  See example <ArrowUpRight size={13} />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+ 
 
       {/* ━━ CTA ━━ */}
       <section className="relative overflow-hidden">

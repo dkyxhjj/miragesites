@@ -6,10 +6,36 @@ import { ArrowRight, CheckCircle2, Mail, Clock, Sparkles } from "lucide-react";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch("https://formspree.io/f/xnjoqpbj", {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        const json = await res.json();
+        setError(json?.errors?.[0]?.message || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setError("Network error. Please check your connection and try again.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   const inputClass =
@@ -112,6 +138,22 @@ export default function ContactPage() {
 
                   <div className="mt-5">
                     <label
+                      htmlFor="phone"
+                      className="mb-1.5 block text-[15px] font-medium text-text-secondary"
+                    >
+                      Phone number
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="(555) 123-4567"
+                      className={inputClass}
+                    />
+                  </div>
+
+                  <div className="mt-5">
+                    <label
                       htmlFor="business"
                       className="mb-1.5 block text-[15px] font-medium text-text-secondary"
                     >
@@ -166,11 +208,18 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {error && (
+                    <p className="mt-4 rounded-lg bg-red-50 px-4 py-3 text-sm text-red-600">
+                      {error}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="btn-hover mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 text-[15px] font-semibold text-white shadow-lg shadow-primary/15"
+                    disabled={loading}
+                    className="btn-hover mt-8 flex w-full items-center justify-center gap-2 rounded-full bg-primary py-4 text-[15px] font-semibold text-white shadow-lg shadow-primary/15 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Send it over <ArrowRight size={15} />
+                    {loading ? "Sending…" : <>Send it over <ArrowRight size={15} /></>}
                   </button>
                   <p className="mt-4 text-center text-sm text-text-muted">
                     No spam, no mailing list. Just a reply from a real person.
@@ -210,14 +259,14 @@ export default function ContactPage() {
                 <p className="text-[15px] text-text-secondary">
                   Drop us a line at{" "}
                   <a
-                    href="mailto:hello@miragesites.com"
+                    href="mailto:richardli1@g.ucla.edu"
                     className="font-medium text-primary hover:underline"
                   >
-                    hello@miragesites.com
+                    richardli1@g.ucla.edu
                   </a>
                 </p>
                 <p className="mt-3 text-sm text-text-muted">
-                  Portland, OR — serving clients everywhere
+                  Los Angeles, CA — serving clients everywhere
                 </p>
               </div>
             </div>
