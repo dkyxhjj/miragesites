@@ -16,8 +16,8 @@ export default function Footer() {
               Custom websites for small businesses — built fast, priced fair, designed to actually bring in customers.
             </p>
             <p className="text-sm text-text-muted">
-              <a href="mailto:hello@miragesites.com" className="transition-colors hover:text-primary">
-                hello@miragesites.com
+              <a href="mailto:richardli1@g.ucla.edu" className="transition-colors hover:text-primary">
+                richardli1@g.ucla.edu
               </a>
             </p>
             <p className="text-sm text-text-muted">Los Angeles, LA — working with clients everywhere</p>

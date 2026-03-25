@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mirage Sites | Custom Websites for Small Businesses",
     description:
-      "Custom websites for cafes, gyms, boutiques, and every small business in between. No templates. From $499.",
+      "Custom websites for cafes, gyms, boutiques, and every small business in between. No templates. $199 per service.",
     url: "https://miragesites.com",
     siteName: "Mirage Sites",
     locale: "en_US",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mirage Sites | Custom Websites for Small Businesses",
     description:
-      "Custom websites for cafes, gyms, boutiques, and every small business in between. No templates. From $499.",
+      "Custom websites for cafes, gyms, boutiques, and every small business in between. No templates. $199 per service.",
   },
 };
 

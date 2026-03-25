@@ -99,8 +99,8 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-4 rounded-2xl bg-white p-6 shadow-xl shadow-black/6 sm:-right-8">
-                <p className="text-lg font-bold text-text-primary">From $499</p>
-                <p className="mt-1 text-sm text-text-muted">one-time, no subscriptions</p>
+                <p className="text-lg font-bold text-text-primary">$299 flat</p>
+                <p className="mt-1 text-sm text-text-muted">per service, no subscriptions</p>
               </div>
             </div>
 
@@ -141,48 +141,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ━━ Process — clean steps with image ━━ */}
-      <section className="relative overflow-hidden border-y border-border-subtle bg-surface-raised py-32 lg:py-40">
-        <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-primary/[0.03] blur-[120px]" />
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">How it works</p>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight lg:text-5xl">
-              Three conversations.<br />One great website.
-            </h2>
-          </div>
-
-          <div className="mt-20 grid gap-8 lg:grid-cols-3">
-            {[
-              {
-                step: "01",
-                title: "Tell us what you need",
-                body: "A quick call or form. Share your business, your goals, your vibe. We ask the right questions.",
-                accent: "border-t-primary",
-              },
-              {
-                step: "02",
-                title: "We design, you react",
-                body: "Within a week, a full mockup — not a wireframe. An actual design of your site. You tell us what to tweak.",
-                accent: "border-t-accent",
-              },
-              {
-                step: "03",
-                title: "Launch day",
-                body: "We handle hosting, domain, speed. You get the keys and a quick walkthrough. Done.",
-                accent: "border-t-primary-light",
-              },
-            ].map((s) => (
-              <div key={s.step} className={`border-t-4 ${s.accent} rounded-2xl bg-white p-10 shadow-sm shadow-black/4`}>
-                <span className="text-6xl font-black text-text-muted/15">{s.step}</span>
-                <h3 className="mt-4 text-xl font-bold">{s.title}</h3>
-                <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">{s.body}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -256,44 +214,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ━━ Our promise — honest trust section ━━ */}
-      <section className="border-y border-border-subtle bg-surface-raised py-32 lg:py-40">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Our promise</p>
-            <h2 className="mt-4 text-4xl font-bold tracking-tight lg:text-5xl">
-              No risk. Just a better site.
-            </h2>
-            <p className="mt-6 text-xl leading-relaxed text-text-secondary">
-              We&apos;re a new studio offering launch pricing — which means you get agency-quality work at a fraction of the cost.
-            </p>
-          </div>
-
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
-            <div className="rounded-2xl bg-white p-10 shadow-sm shadow-black/4">
-              <p className="text-4xl font-black gradient-text">01</p>
-              <h3 className="mt-4 text-xl font-bold">Free mockup first</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">
-                We&apos;ll design a sample homepage for your business before you pay a cent. If you don&apos;t love it, walk away. No hard feelings.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-10 shadow-sm shadow-black/4">
-              <p className="text-4xl font-black gradient-text">02</p>
-              <h3 className="mt-4 text-xl font-bold">You own everything</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">
-                Code, design, domain — it&apos;s all yours. No monthly fees, no lock-in. Pay once and your site is yours forever.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-10 shadow-sm shadow-black/4">
-              <p className="text-4xl font-black gradient-text">03</p>
-              <h3 className="mt-4 text-xl font-bold">Real human support</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">
-                You talk directly to the person building your site. Questions after launch? We&apos;re an email away. No chatbots, no ticket queues.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ━━ Final CTA — clean, with background image ━━ */}
       <section className="relative overflow-hidden">
