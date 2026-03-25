@@ -232,6 +232,25 @@ export default function ContactPage() {
             <div className="space-y-6 lg:col-span-5 lg:pt-4">
               <div className="rounded-2xl bg-white p-8 shadow-sm shadow-black/4">
                 <div className="mb-4 inline-flex rounded-xl bg-primary/8 p-2.5 text-primary">
+                  <Mail size={18} />
+                </div>
+                <h3 className="mb-2 text-lg font-bold">Prefer email?</h3>
+                <p className="text-[15px] text-text-secondary">
+                  Drop us a line at{" "}
+                  <a
+                    href="mailto:richardli1@g.ucla.edu"
+                    className="font-medium text-primary hover:underline"
+                  >
+                    richardli1@g.ucla.edu
+                  </a>
+                </p>
+                <p className="mt-3 text-sm text-text-muted">
+                  Los Angeles, CA — serving clients everywhere
+                </p>
+              </div>
+
+              <div className="rounded-2xl bg-white p-8 shadow-sm shadow-black/4">
+                <div className="mb-4 inline-flex rounded-xl bg-primary/8 p-2.5 text-primary">
                   <Sparkles size={18} />
                 </div>
                 <h3 className="mb-2 text-lg font-bold">Free mockup offer</h3>
@@ -251,24 +270,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="rounded-2xl bg-white p-8 shadow-sm shadow-black/4">
-                <div className="mb-4 inline-flex rounded-xl bg-primary/8 p-2.5 text-primary">
-                  <Mail size={18} />
-                </div>
-                <h3 className="mb-2 text-lg font-bold">Prefer email?</h3>
-                <p className="text-[15px] text-text-secondary">
-                  Drop us a line at{" "}
-                  <a
-                    href="mailto:richardli1@g.ucla.edu"
-                    className="font-medium text-primary hover:underline"
-                  >
-                    richardli1@g.ucla.edu
-                  </a>
-                </p>
-                <p className="mt-3 text-sm text-text-muted">
-                  Los Angeles, CA — serving clients everywhere
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>

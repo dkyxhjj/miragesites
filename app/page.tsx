@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Star, Quote } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -52,17 +52,15 @@ export default function Home() {
                   priority
                 />
               </div>
-              {/* Floating stat — bottom left */}
+              {/* Floating badge — bottom left */}
               <div className="absolute -bottom-5 -left-5 rounded-2xl bg-white px-6 py-5 shadow-xl shadow-black/8 sm:-left-8">
-                <p className="text-3xl font-extrabold tracking-tight text-text-primary">200+</p>
-                <p className="text-sm text-text-muted">sites launched</p>
+                <p className="text-lg font-bold tracking-tight text-text-primary">Custom design</p>
+                <p className="text-sm text-text-muted">no templates, ever</p>
               </div>
-              {/* Floating stat — top right */}
+              {/* Floating badge — top right */}
               <div className="absolute -top-3 -right-3 rounded-2xl bg-white px-5 py-4 shadow-xl shadow-black/8 sm:-right-6">
-                <div className="flex gap-0.5 text-amber-400">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                </div>
-                <p className="mt-1 text-sm font-medium text-text-primary">4.9 avg rating</p>
+                <p className="text-lg font-bold text-text-primary">Fast delivery</p>
+                <p className="mt-0.5 text-sm text-text-muted">under 2 weeks</p>
               </div>
             </div>
           </div>
@@ -73,11 +71,11 @@ export default function Home() {
       <section className="border-y border-border-subtle bg-surface-raised py-10">
         <div className="mx-auto max-w-5xl px-6 text-center">
           <p className="mb-6 text-xs font-semibold uppercase tracking-widest text-text-muted">
-            We&apos;ve built sites for businesses like
+            Built for small businesses
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-x-14 gap-y-4">
-            {["Bloom Floral Co.", "Peak Fitness", "GreenScape Lawns", "The Daily Grind", "Luxe Threads"].map((name) => (
-              <span key={name} className="text-[15px] font-semibold tracking-wide text-text-muted/60 transition-colors hover:text-text-primary">
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
+            {["Cafes & Restaurants", "Fitness Studios", "Landscapers", "Boutiques", "Local Services"].map((name) => (
+              <span key={name} className="text-[15px] font-semibold tracking-wide text-text-muted/60">
                 {name}
               </span>
             ))}
@@ -101,8 +99,8 @@ export default function Home() {
                 />
               </div>
               <div className="absolute -bottom-6 -right-4 rounded-2xl bg-white p-6 shadow-xl shadow-black/6 sm:-right-8">
-                <p className="text-4xl font-extrabold gradient-text">98%</p>
-                <p className="mt-1 text-sm text-text-muted">first-round approval</p>
+                <p className="text-lg font-bold text-text-primary">From $499</p>
+                <p className="mt-1 text-sm text-text-muted">one-time, no subscriptions</p>
               </div>
             </div>
 
@@ -189,22 +187,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ━━ Portfolio preview — two real projects ━━ */}
+      {/* ━━ What we build — honest showcase ━━ */}
       <section className="py-32 lg:py-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-primary">Selected work</p>
+              <p className="text-sm font-semibold uppercase tracking-widest text-primary">What we build</p>
               <h2 className="mt-4 text-4xl font-bold tracking-tight lg:text-5xl">
-                Real sites, real results.
+                Sites that fit<br /><span className="gradient-text">your business.</span>
               </h2>
             </div>
             <Link href="/portfolio" className="btn-hover inline-flex items-center gap-2 text-[15px] font-semibold text-primary hover:text-primary-dark">
-              View all projects <ArrowRight size={15} />
+              See sample designs <ArrowRight size={15} />
             </Link>
           </div>
 
-          {/* Project 1 — wide image left, text right */}
+          {/* Example 1 — cafe/restaurant */}
           <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
             <div className="relative aspect-[3/2] overflow-hidden rounded-2xl shadow-lg shadow-black/6">
               <Image
@@ -216,42 +214,34 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-text-muted">Small Business</p>
-              <h3 className="mt-3 text-3xl font-bold">The Daily Grind Coffee</h3>
+              <p className="text-sm font-semibold uppercase tracking-wider text-text-muted">Cafe & Restaurant</p>
+              <h3 className="mt-3 text-3xl font-bold">Menu, online ordering, location</h3>
               <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-                Marcus ran a popular Portland cafe with a Wix template from 2019. We built a custom site with online ordering and a menu he updates himself.
+                Your cafe deserves more than a Wix template. We design sites with menus customers can actually read, online ordering that works, and a vibe that matches your space.
               </p>
-              <div className="mt-8 flex gap-8">
-                <div>
-                  <p className="text-3xl font-bold gradient-text">+65%</p>
-                  <p className="mt-1 text-sm text-text-muted">online orders</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text">10k</p>
-                  <p className="mt-1 text-sm text-text-muted">monthly visitors</p>
-                </div>
-              </div>
+              <Link
+                href="/contact"
+                className="btn-hover mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-primary hover:text-primary-dark"
+              >
+                Get a free mockup for your cafe <ArrowRight size={14} />
+              </Link>
             </div>
           </div>
 
-          {/* Project 2 — text left, image right (reversed) */}
+          {/* Example 2 — fitness/services */}
           <div className="mt-24 grid items-center gap-12 lg:grid-cols-2">
             <div className="order-2 lg:order-1">
-              <p className="text-sm font-semibold uppercase tracking-wider text-text-muted">Service-Based</p>
-              <h3 className="mt-3 text-3xl font-bold">Peak Performance Fitness</h3>
+              <p className="text-sm font-semibold uppercase tracking-wider text-text-muted">Fitness & Services</p>
+              <h3 className="mt-3 text-3xl font-bold">Bookings, schedules, memberships</h3>
               <p className="mt-4 text-lg leading-relaxed text-text-secondary">
-                Sarah was paying for three separate tools. We consolidated bookings, memberships, and content into one fast, beautiful site.
+                Stop paying for three separate tools. We build sites that handle bookings, class schedules, and membership info — all in one place that looks great on every device.
               </p>
-              <div className="mt-8 flex gap-8">
-                <div>
-                  <p className="text-3xl font-bold gradient-text">+80%</p>
-                  <p className="mt-1 text-sm text-text-muted">bookings</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold gradient-text">150</p>
-                  <p className="mt-1 text-sm text-text-muted">new members</p>
-                </div>
-              </div>
+              <Link
+                href="/contact"
+                className="btn-hover mt-8 inline-flex items-center gap-2 text-[15px] font-semibold text-primary hover:text-primary-dark"
+              >
+                Get a free mockup for your studio <ArrowRight size={14} />
+              </Link>
             </div>
             <div className="relative order-1 aspect-[3/2] overflow-hidden rounded-2xl shadow-lg shadow-black/6 lg:order-2">
               <Image
@@ -266,72 +256,40 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ━━ Testimonials — featured + stacked ━━ */}
+      {/* ━━ Our promise — honest trust section ━━ */}
       <section className="border-y border-border-subtle bg-surface-raised py-32 lg:py-40">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="max-w-xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Kind words</p>
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">Our promise</p>
             <h2 className="mt-4 text-4xl font-bold tracking-tight lg:text-5xl">
-              Our clients talk too.
+              No risk. Just a better site.
             </h2>
+            <p className="mt-6 text-xl leading-relaxed text-text-secondary">
+              We&apos;re a new studio offering launch pricing — which means you get agency-quality work at a fraction of the cost.
+            </p>
           </div>
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-5">
-            {/* Featured testimonial — 3 cols */}
-            <div className="flex flex-col justify-between rounded-2xl bg-white p-10 shadow-sm shadow-black/4 lg:col-span-3">
-              <div>
-                <Quote size={36} className="mb-5 text-primary/20" />
-                <p className="text-2xl font-medium leading-relaxed text-text-primary">
-                  I was paying $150/month for a Wix site that looked like everyone else&apos;s. Mirage built me something custom for less than a year of that subscription.
-                </p>
-                <p className="mt-4 text-lg text-text-secondary">
-                  People actually compliment my website now. That never happened before.
-                </p>
-              </div>
-              <div className="mt-10 flex items-center gap-4 border-t border-border-subtle pt-6">
-                <div className="relative h-12 w-12 overflow-hidden rounded-full">
-                  <Image
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
-                    alt="Marcus Thompson"
-                    fill
-                    className="object-cover"
-                    sizes="48px"
-                  />
-                </div>
-                <div>
-                  <p className="text-[15px] font-semibold">Marcus Thompson</p>
-                  <p className="text-sm text-text-muted">The Daily Grind Coffee, Portland</p>
-                </div>
-              </div>
+          <div className="mt-16 grid gap-8 md:grid-cols-3">
+            <div className="rounded-2xl bg-white p-10 shadow-sm shadow-black/4">
+              <p className="text-4xl font-black gradient-text">01</p>
+              <h3 className="mt-4 text-xl font-bold">Free mockup first</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">
+                We&apos;ll design a sample homepage for your business before you pay a cent. If you don&apos;t love it, walk away. No hard feelings.
+              </p>
             </div>
-
-            {/* Stacked smaller testimonials — 2 cols */}
-            <div className="flex flex-col gap-8 lg:col-span-2">
-              <div className="flex-1 rounded-2xl bg-white p-8 shadow-sm shadow-black/4">
-                <div className="mb-3 flex gap-0.5 text-amber-400">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                </div>
-                <p className="text-[15px] leading-relaxed text-text-secondary">
-                  &ldquo;They redesigned our site in 10 days and bookings went up almost immediately. Didn&apos;t expect that big of a difference.&rdquo;
-                </p>
-                <div className="mt-6">
-                  <p className="text-[15px] font-semibold">Sarah Chen</p>
-                  <p className="text-sm text-text-muted">Peak Performance Fitness, Austin</p>
-                </div>
-              </div>
-
-              <div className="flex-1 rounded-2xl bg-white p-8 shadow-sm shadow-black/4">
-                <div className="mb-3 flex gap-0.5 text-amber-400">
-                  {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="currentColor" />)}
-                </div>
-                <p className="text-[15px] leading-relaxed text-text-secondary">
-                  &ldquo;Not tech-savvy at all and they made the process painless. Showed me how to update things myself.&rdquo;
-                </p>
-                <div className="mt-6">
-                  <p className="text-[15px] font-semibold">David Park</p>
-                  <p className="text-sm text-text-muted">GreenScape Landscaping, Denver</p>
-                </div>
-              </div>
+            <div className="rounded-2xl bg-white p-10 shadow-sm shadow-black/4">
+              <p className="text-4xl font-black gradient-text">02</p>
+              <h3 className="mt-4 text-xl font-bold">You own everything</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">
+                Code, design, domain — it&apos;s all yours. No monthly fees, no lock-in. Pay once and your site is yours forever.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white p-10 shadow-sm shadow-black/4">
+              <p className="text-4xl font-black gradient-text">03</p>
+              <h3 className="mt-4 text-xl font-bold">Real human support</h3>
+              <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">
+                You talk directly to the person building your site. Questions after launch? We&apos;re an email away. No chatbots, no ticket queues.
+              </p>
             </div>
           </div>
         </div>

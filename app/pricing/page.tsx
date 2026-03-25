@@ -149,20 +149,48 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* ━━ FAQ-style note ━━ */}
-      <section className="py-28">
-        <div className="mx-auto max-w-3xl px-6 text-center lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight lg:text-4xl">Every plan includes</h2>
-          <div className="mt-10 grid gap-6 text-left sm:grid-cols-2">
+      {/* ━━ FAQ ━━ */}
+      <section className="border-t border-border-subtle bg-surface-raised py-28">
+        <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-widest text-primary">FAQ</p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight lg:text-4xl">Common questions</h2>
+          </div>
+
+          <div className="mt-14 space-y-8">
             {[
-              { title: "You own everything", desc: "Code, design, domain — it's all yours." },
-              { title: "No monthly fees", desc: "Pay once. That's it. Hosting guidance included." },
-              { title: "Fast turnaround", desc: "Most sites launch in under two weeks." },
-              { title: "Real human support", desc: "Questions after launch? We're here." },
-            ].map((item) => (
-              <div key={item.title} className="rounded-xl bg-surface-raised p-6">
-                <h3 className="text-lg font-bold">{item.title}</h3>
-                <p className="mt-2 text-[15px] text-text-secondary">{item.desc}</p>
+              {
+                q: "What if I don't like the design?",
+                a: "We offer a free homepage mockup before you pay anything. If the direction isn't right, we revise it. Every plan includes revision rounds, and the Growth plan includes 3 rounds. We don't stop until you're happy.",
+              },
+              {
+                q: "Do I actually own the website?",
+                a: "Yes — 100%. The code, the design, the domain, all of it. There's no lock-in, no proprietary platform. You can host it anywhere and hire anyone to maintain it.",
+              },
+              {
+                q: "What about hosting?",
+                a: "We'll help you set up hosting. Most of our sites run on Vercel or Netlify, which are free for small sites. If you need something more robust, we'll recommend the best option for your traffic level.",
+              },
+              {
+                q: "Can I update the site myself?",
+                a: "Depends on the plan. The Growth and Premium tiers include a CMS (content management system) so you can update text, images, and blog posts yourself without touching code.",
+              },
+              {
+                q: "How fast is the turnaround?",
+                a: "Starter sites ship in about 2 days. Growth sites in about 4 days. Premium in about a week. These are working days — we move fast because we've done this many times.",
+              },
+              {
+                q: "Are there any monthly fees?",
+                a: "Not from us. You pay once and that's it. The only ongoing cost is hosting (often free) and your domain name (~$12/year). No subscriptions, no surprise invoices.",
+              },
+              {
+                q: "What if I need changes after launch?",
+                a: "Every plan includes a support window (30 days for Growth, 90 days for Premium). After that, we offer affordable maintenance plans or you can make one-off requests.",
+              },
+            ].map((faq) => (
+              <div key={faq.q} className="border-b border-border-subtle pb-8">
+                <h3 className="text-lg font-bold">{faq.q}</h3>
+                <p className="mt-3 text-[15px] leading-relaxed text-text-secondary">{faq.a}</p>
               </div>
             ))}
           </div>

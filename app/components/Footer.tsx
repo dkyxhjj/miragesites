@@ -20,7 +20,7 @@ export default function Footer() {
                 hello@miragesites.com
               </a>
             </p>
-            <p className="text-sm text-text-muted">Portland, OR — working with clients everywhere</p>
+            <p className="text-sm text-text-muted">Los Angeles, LA — working with clients everywhere</p>
           </div>
 
           {/* Nav links */}
@@ -30,10 +30,8 @@ export default function Footer() {
               <ul className="space-y-3">
                 {[
                   { href: "/", label: "Home" },
-                  { href: "/services", label: "Services" },
                   { href: "/portfolio", label: "Portfolio" },
                   { href: "/pricing", label: "Pricing" },
-                  { href: "/about", label: "Studio" },
                   { href: "/contact", label: "Contact" },
                 ].map((l) => (
                   <li key={l.href}>
@@ -56,7 +54,7 @@ export default function Footer() {
                   "Maintenance",
                 ].map((s) => (
                   <li key={s}>
-                    <Link href="/services" className="text-[15px] text-text-secondary transition-colors hover:text-primary">
+                    <Link href="/contact" className="text-[15px] text-text-secondary transition-colors hover:text-primary">
                       {s}
                     </Link>
                   </li>
@@ -71,7 +69,6 @@ export default function Footer() {
                   { label: "See examples", href: "/portfolio" },
                   { label: "Get a free mockup", href: "/contact" },
                   { label: "Check pricing", href: "/pricing" },
-                  { label: "About the studio", href: "/about" },
                 ].map((t) => (
                   <li key={t.label}>
                     <Link href={t.href} className="text-[15px] text-text-secondary transition-colors hover:text-primary">
@@ -89,10 +86,7 @@ export default function Footer() {
       <div className="border-t border-border-subtle">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-sm text-text-muted sm:flex-row lg:px-8">
           <p>&copy; {new Date().getFullYear()} Mirage Sites. All rights reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/contact" className="transition-colors hover:text-text-primary">Privacy</Link>
-            <Link href="/contact" className="transition-colors hover:text-text-primary">Terms</Link>
-          </div>
+          <p className="text-sm">Los Angeles, CA</p>
         </div>
       </div>
     </footer>

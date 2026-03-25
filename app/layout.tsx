@@ -26,8 +26,24 @@ export const metadata: Metadata = {
     "small business websites",
     "affordable web design",
     "custom websites",
-    "website builder",
+    "Los Angeles web designer",
   ],
+  metadataBase: new URL("https://miragesites.com"),
+  openGraph: {
+    title: "Mirage Sites | Custom Websites for Small Businesses",
+    description:
+      "Custom websites for cafes, gyms, boutiques, and every small business in between. No templates. From $499.",
+    url: "https://miragesites.com",
+    siteName: "Mirage Sites",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mirage Sites | Custom Websites for Small Businesses",
+    description:
+      "Custom websites for cafes, gyms, boutiques, and every small business in between. No templates. From $499.",
+  },
 };
 
 export default function RootLayout({
